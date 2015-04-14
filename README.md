@@ -5,7 +5,7 @@
 
 instALler is a easy installer for Arch Linux operating system.
 
-Currently doesn't have UEFI support ! In the future my change.
+Currently doesn't have UEFI support ! In the future may change.
 
 This project needs your testing.
 
