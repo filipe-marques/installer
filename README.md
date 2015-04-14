@@ -1,19 +1,20 @@
 ﻿## instALler - Arch Linux installer
 
 #### Copyright (C) 2015 Filipe Marques eagle.software3@gmail.com
-#### Project licensed under GNU GPL v.3
+#### Project licensed under GNU GPL v.3+
 
-instALler is a easy command line installer to install Arch Linux operating system.
+instALler is a easy installer for Arch Linux operating system.
 
 Currently doesn't have UEFI support ! In the future my change.
 
-This project is in ALPHA 2 and it installs Arch Linux and needs your testing.
+This project needs your testing.
 
 #### To execute:
 
 In virtualbox or in a real machine: 
 
 1. boot archlinux iso
+1.1 run in root mode
 
 2. install python3 and git
 
@@ -27,10 +28,18 @@ pacman -S python git
 git clone https://www.github.com/filipe-marques/installer
 ```
 
-4. execute the file installer.py
+4. execute the file install.py
 
 ```shell
-python installer.py
+python install.py
 ```
+
+After install Arch Linux, login as root and execute:
+
+```shell
+python config.py
+```
+
+it will help you install desktop environments, drivers, themes, ... (currently not implemented)
 
 ### All trademarks and registered trademarks are the property of their respective owners.
