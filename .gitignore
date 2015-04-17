@@ -1,2 +1,6 @@
 ﻿installer.kdev4
+<<<<<<< HEAD
 .kdev4/
+=======
+.kdev4/*
+>>>>>>> dev

@@ -27,7 +27,7 @@ class Installer:
 		self.uefi = 0
 	
 	def DoBashCommand(self, bashcommand):
-		subprocess.call(["arch-chroot", "/mnt", "/bin/bash", "-c", '"'bashcommand'"'])
+		subprocess.call(["arch-chroot", "/mnt", "/bin/bash", "-c", '"'+bashcommand+'"'])
 	
 	def CheckUefiBios(self):
 		if os.path.exists("/sys/firmware/efi"):
@@ -265,7 +265,7 @@ class Installer:
 			#self.DoBashCommand("pacman -S grub os-prober")
 		else:
 			print("Installing grub and os-prober ... for MBR")
-			self.DoBashCommand("pacman -S grub os-prober")
+			self.DoBashCommand("pacman -S grub os-prober lsb-release")
 			self.DoBashCommand("grub-install --target=i386-pc --recheck /dev/sda")
 			self.DoBashCommand("grub-mkconfig -o /boot/grub/grub.cfg")
 		input("Press Enter to continue ... ")
